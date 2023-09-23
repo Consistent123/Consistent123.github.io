@@ -1,6 +1,6 @@
 {
-    "name": "Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors",
-    "short_name": "Magic123",
+    "name": "Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors",
+    "short_name": "Consistent123",
     "icons": [{
         "src": "/dragon.png",
         "sizes": "290x288",
