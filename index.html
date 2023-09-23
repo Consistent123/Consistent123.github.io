@@ -20,7 +20,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors</title>
+    <title>Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet'
         type='text/css'>
@@ -35,24 +35,22 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <meta property="og:site_name"
-        content="Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors" />
+        content="Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors" />
     <meta property="og:type" content="video.other" />
     <meta property="og:title"
-        content="Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors" />
+        content="Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors" />
     <meta property="og:description"
-        content="Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors, 2023." />
-    <meta property="og:url" content="https://magic123-2023.github.io/" />
-    <meta property="og:image" content="https://magic123-2023.github.io/assets/images/pull.png" />
+        content="Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors" />
+    <meta property="og:url" content="https://consistent123.github.io/" />
     <!-- todo change the sample image here  -->
 
-    <meta property="article:publisher" content="https://magic123-2023.github.io/" />
+    <meta property="article:publisher" content="https://consistent123.github.io/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title"
-        content="Magic123: One Image to High-Quality 3D Object Generation Using Both 2D and 3D Diffusion Priors" />
+        content="Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors" />
     <meta name="twitter:description"
         content="We combine 2D and 3D priors to generate photo-realistic 3D objects from a single image." />
-    <meta name="twitter:url" content="https://magic123-2023.github.io/" />
-    <meta name="twitter:image" content="https://magic123-2023.github.io/assets/images/pull.png" />
+    <meta name="twitter:url" content="https://consistent123.github.io/" />
     <!-- <meta name="twitter:site" content="" /> -->
 
     <script src="assets/js/video_comparison.js"></script>
@@ -69,14 +67,13 @@
     </div> -->
     <div class="highlight-clean" style="padding-bottom: 10px;">
         <div class="container" style="max-width: 1080px;">
-            <h1 class="text-center"><b>Magic123</b>: One Image to High-Quality 3D Object Generation Using Both 2D and 3D
-                Diffusion Priors</h1>
+            <h1 class="text-center"><b>Consistent123</b>: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors</h1>
         </div>
         <div class="d-flex justify-content-center">
             <div class="container" style="max-width: 1080px;">
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h4><a class="text-center">Magic123 Team</a></h4>
+                        <h4><a class="text-center">Anonymous</a></h4>
                         <!-- <h6 class="text-center">Google Research</h6> -->
                     </div>
                     <!-- Additional author columns can be added here -->
@@ -111,45 +108,26 @@
 
 
     <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
+<!--     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>Abstract</h2>
                 <p>
                     <!-- <strong> -->
-                    We present "Magic123", a two-stage coarse-to-fine solution for high-quality, textured 3D meshes
-                    generation from a single unposed image in the wild using both 2D and 3D priors. In the first stage,
-                    we optimize a neural radiance field to produce a coarse geometry. In the second stage, we adopt a
-                    memory-efficient differentiable mesh representation to yield a high-resolution mesh with a visually
-                    appealing texture. In both stages, the 3D content is learned through reference view supervision and
-                    novel views guided by both 2D and 3D diffusion priors. We introduce a single tradeoff parameter
-                    between the 2D and 3D priors to control exploration (more imaginative) and exploitation (more
-                    precise) of the generated geometry. Additionally, We employ textual inversion and monocular depth
-                    regularization to encourage consistent appearances across views and to prevent degenerate solutions,
-                    respectively.
-                    Magic123 demonstrates a significant improvement over previous image-to-3D techniques, as validated
-                    through extensive experiments on synthetic benchmarks and diverse real-world images.
+                   
                     <!-- </strong> -->
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="container" style="max-width: 768px;">
+<!--     <div class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-                <!-- Image -->
-                <img src="assets/images/magic123_pipeline.png" alt="Image description" class="img-fluid">
-                <h6 class="caption" style="text-align: left;">Magic123 pipeline. Magic123 is a two-stage coarse-to-fine framework for high-quality
-                    3D generation from a reference image. Magic123 is guided by the reference image, constrained by the
-                    monocular depth estimation from the image, and driven by a joint 2D and 3D diffusion prior to dream
-                    up novel views. At the coarse stage, we optimize an Instant-NGP neural radiance field (NeRF) to
-                    reconstruct a coarse geometry. At the fine stage, we initialize a DMTet mesh from the NeRF output
-                    and optimize a high-resolution mesh and texture directly. Textural inversion is used in both stages
-                    to generate object-preserving geometry and view-consistent textures.</h6>
+
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -160,8 +138,8 @@
     <div class="container" style="max-width: 1080px;">
         <div class="row">
             <div class="col-sm-8">
-                <h2>Example generated objects</h2>
-                <p>Magic123 generates photo-realistic 3D objects from a single unposed image. </p>
+                <h2>Example generated assets</h2>
+                <p>Consistent123 generates highly consistent 3D objects from a single image. </p>
             </div>
             <!-- <div class="col-sm-4 my-auto">
                 <a href="/gallery.html" class="btn btn-primary btn-lg btn-search"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewbox="0 0 600 550">
@@ -333,21 +311,10 @@
 
         <hr class="divider" />
 
-        <div class="container" style="max-width: 1080px;">
+<!--         <div class="container" style="max-width: 1080px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Tradeoff between 2D and 3D priors in Magic123</h2>
-                    <p> We compare single image reconstructions for three cases: a cactus (common object), two stacked
-                        donuts (less common object), and a dragon statue (uncommon object).
-                        Magic123 with only 2D prior (on the right) favors geometry exploration, generating 3D content
-                        with
-                        more imagination but potentially lacking 3D consistency. Magic123 with only 3D prior prioritizes
-                        geometry exploitation, resulting in precise yet potentially simplified geometry with reduced
-                        details. Magic123 thus proposes to use both 2D and 3D prior and introduces a tradeoff parameter
-                        \( \lambda_{2D/3D} \) to control the geometry exploration and exploitation. We provide a
-                        balanced point
-                        \( \lambda_{2D/3D}=1 \) , with which Magic123 consistently offers
-                        identity-preserving 3D content with fine-grained geometry and visually appealing texture. </p>
+
                 </div>
             </div>
             <div class="row justify-content-center" style="padding: 0; margin: 0;">
@@ -359,18 +326,14 @@
                     <img src="assets/images/2d_3d.png" alt="Image description" class="img-fluid">
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
-        <hr class="divider" />
+<!--         <hr class="divider" />
         <div class="container" style="max-width: 1080px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Effects of the coarse-to-fine pipeline</h2>
-                    <p> Qualitative comparisons of the coarse and fine stages between Magic123 with only 2D prior \(
-                        \lambda_{2D}=1,\lambda_{3D}=0 \),
-                        Magic123 with only 3D prior \( \lambda_{2D}=0,\lambda_{3D}=40 \), and Magic123 \(
-                        \lambda_{2D}=1,\lambda_{3D}=40 \). </p>
+                    
                 </div>
             </div>
             <div class="row justify-content-center" style="padding: 0; margin: 0;">
@@ -379,7 +342,7 @@
                     <div style="height: 10px;"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -387,30 +350,19 @@
 
 
 
-        <div class="container" style="max-width: 1080px;">
+<!--         <div class="container" style="max-width: 1080px;">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Quantitative Results</h2>
-                    <p> To demonstrate the effectiveness of the proposed Magic123, we evaluate its performance on the
-                        NeRF4 and RealFusion15 datasets. We conduct a comprehensive and quantitative comparison with
-                        multiple baselines for both datasets, as shown in Table I. Notably, our method achieves Top-1
-                        performance across all the metrics when compared to previous SOTA approaches. This remarkable
-                        performance demonstrates the superiority of Magic123 and its ability to generate high-quality 3D
-                        representations. </p>
+
                 </div>
             </div>
 
-            <!-- <div class="col-md-12">
-                <img src="assets/images/results.png" alt="Image description" class="img-fluid">
-            </div> -->
 
             <div class="row justify-content-center" style="padding: 0; margin: 0;">
-                <div class="col-md-11 text-center">
-                    <img src="assets/images/results.png" alt="Image description" class="img-fluid">
-                </div>
+
             </div>
 
-        </div>
+        </div> -->
 
         <hr class="divider" />
 
