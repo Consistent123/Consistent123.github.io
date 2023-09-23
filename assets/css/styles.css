@@ -769,8 +769,8 @@ model-viewer .controls {
 }
 
 .magic-size {
-    width: 150px; /* Adjust the width as needed */
-    height: 150px; /* Adjust the height as needed */
+    width: 80px; /* Adjust the width as needed default 150px*/
+    height: 80px; /* Adjust the height as needed default 150px */
     object-fit: cover;
     margin-top: 2.5px;
     margin-bottom: 2.5px;
