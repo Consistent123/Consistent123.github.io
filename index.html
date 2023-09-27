@@ -26,7 +26,7 @@
         type='text/css'>
     <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/dragon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/dragon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/dragon-16x16.png">
@@ -67,7 +67,8 @@
     </div> -->
     <div class="highlight-clean" style="padding-bottom: 10px;">
         <div class="container" style="max-width: 1080px;">
-            <h1 class="text-center"><b>Consistent123</b>: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors</h1>
+            <h1 class="text-center"><b>Consistent123</b>: One Image to Highly Consistent 3D Asset Using Case-Aware
+                Diffusion Priors</h1>
         </div>
         <div class="d-flex justify-content-center">
             <div class="container" style="max-width: 1080px;">
@@ -81,7 +82,7 @@
             </div>
         </div>
 
-        
+
         <!-- <div class="buttons" style="margin-bottom: 8px;">
             <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2209.14988">
                 <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
@@ -104,21 +105,21 @@
     </div>
 
 
-<!--     <hr class="divider" /> -->
-<!--     <div class="container" style="max-width: 768px;">
+    <!--     <hr class="divider" /> -->
+    <!--     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
                 <h2>Abstract</h2>
                 <p>
                     <strong> -->
-                   
-                    <!-- </strong>
+
+    <!-- </strong>
                 </p>
             </div>
         </div>
     </div> -->
 
-<!--     <div class="container" style="max-width: 768px;">
+    <!--     <div class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
 
@@ -130,18 +131,15 @@
 
 
 
-
-<!--     <hr class="divider" /> -->
     <div class="container" style="max-width: 1080px;">
         <div class="row">
             <div class="col-sm-8">
-<!--                 <h2>Example generated assets</h2>
+    <!--                 <h2>Example generated assets</h2>
                 <p>Consistent123 generates highly consistent 3D objects from a single image. </p> -->
                 <h2>Comparison</h2>
                 <p>3D objects from a single image of RealFusion15 dataset. </p>
             </div>
         </div>
-
         <div class="container">
 
             <div class="row">
@@ -151,223 +149,81 @@
                         Input
                     </div>
                 </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/bear.png" alt="Bear Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/dragon.png" alt="Dragon Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/horse.png" alt="Horse Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/teapot.png" alt="Sparrow Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/dragon.png" alt="Dragon Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/horse.png" alt="Horse Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/teapot.png" alt="Sparrow Image" class="magic-size">
-                </div>
+                <script>
+                    var imageNames = ['2', '7', '8', '9', '10', '12', '14'];
+                    var generatedCode = '';
+
+                    for (var i = 0; i < imageNames.length; i++) {
+                        generatedCode += `
+						<div class="col-3">
+							<img src="assets/videos/reference/${imageNames[i]}.png" alt="${imageNames[i].charAt(0).toUpperCase() + imageNames[i].slice(1)} Image" class="magic-size">
+						</div>`;
+                    }
+
+                    // 插入生成的代码段
+                    document.write(generatedCode);
+                </script>
             </div>
 
 
-            <!-- Row 4 -->
-            <div class="row">
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-<!--                         <a href="https://github.com/openai/shap-e">Shap-E</a> -->
-                        <a >A</a>
+
+            <script>
+                var typeNames = ['A', 'B', 'C', 'D', 'E']
+                // 定义文件夹名称列表
+                var folderNames = ['realfusion', 'makeit3d', 'zero123', 'magic123', 'ours'];
+
+                // 定义文件列表
+                var fileNames = ['2', '7', '8', '9', '10', '12', '14'];
+
+                // 创建一个字符串变量来保存生成的代码
+                var generatedCode = '';
+                /*
+                generatedCode += `
+                    <div class="container">
+                `;
+                */
+
+                // 循环遍历文件夹名称列表
+                for (var i = 0; i < folderNames.length; i++) {
+                    var folderName = folderNames[i];
+
+                    // 生成每个文件夹对应的代码
+                    generatedCode += `
+                        <div class="row">
+                            <!-- Row ${i + 4} -->
+                            <div class="col-1 d-flex align-items-center">
+                                <div class="method-title">
+                                    ${typeNames[i]}
+                                </div>
+                            </div>
+                    `;
+
+                    // 循环遍历文件列表
+                    for (var j = 0; j < fileNames.length; j++) {
+                        var fileName = fileNames[j];
+
+                        // 生成每个文件对应的代码
+                        generatedCode += `
+                            <div class="col-3">
+                                <video src="assets/videos/${folderName}/${fileName}.mp4" autoplay loop playsinline muted class="magic-size"
+                                    type="video/mp4"></video>
+                            </div>
+                        `;
+                    }
+
+                    generatedCode += `
+                        </div>
+                    `;
+                }
+                /*eneratedCode += `
                     </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
+                `;
+                */
+                // 输出生成的代码到页面
+                document.write(generatedCode);
+            </script>
 
 
-            <div class="row">
-                <!-- Row 2 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a>B</a>
-<!--                         <a href="https://ku-cvlab.github.io/3DFuse/">3D Fuse</a> -->
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Row 3 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a >C</a>
-<!--                         <a href="https://vita-group.github.io/NeuralLift-360/">Neural Lift</a> -->
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/teapot.mp4" autoplay loop playsinline muted
-                        class="magic-size" type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/teapot.mp4" autoplay loop playsinline muted
-                        class="magic-size" type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Row 3 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a >D</a>
-<!--                         <a href="https://lukemelas.github.io/realfusion/">Real Fusion</a> -->
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Row 4 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        E
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
-
-
-        </div>
-    
         <hr class="divider" />
         <div class="row">
             <div class="col-sm-8">
@@ -375,9 +231,9 @@
                 <p>3D objects from a single image of C10 dataset. </p>
             </div>
         </div>
-        
+
         <div class="container">
-            
+
             <div class="row">
                 <!-- Row 1 -->
                 <div class="col-1 d-flex align-items-center">
@@ -385,254 +241,85 @@
                         Input
                     </div>
                 </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/bear.png" alt="Bear Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/dragon.png" alt="Dragon Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/horse.png" alt="Horse Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/teapot.png" alt="Sparrow Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/dragon.png" alt="Dragon Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/horse.png" alt="Horse Image" class="magic-size">
-                </div>
-                <div class="col-3">
-                    <img src="assets/videos/reference/teapot.png" alt="Sparrow Image" class="magic-size">
-                </div>
+                <script>
+                    // var imageNames = ['1.frenchfries.jpg', '2.metal_dragon_statue.png', '3.motorcycle.jpg', '4.yellow_shoe.jpg', '5.SpongeBob.jpg', '6.bananas.jpg', '7.cat_statue.png']
+                    // var imageNames = ['1.frenchfries.jpg', '2.metal_dragon_statue.png', '3.motorcycle.jpg', '4.yellow_shoe.jpg', '5.SpongeBob.jpg', '6.bananas.jpg', '7.cat_statue.png', 
+                    var imageNames = ['1', '3', '4', '5', '6', '11', '13'];
+                    // var imageNames = ['1.frenchfries.jpg', '2.metal_dragon_statue.png', '3.motorcycle.jpg', '4.yellow_shoe.jpg']
+                    var generatedCode = '';
+
+                    for (var i = 0; i < imageNames.length; i++) {
+                        generatedCode += `
+						<div class="col-3">
+							<img src="assets/videos/reference/${imageNames[i]}.png" alt="${imageNames[i].charAt(0).toUpperCase() + imageNames[i].slice(1)} Image" class="magic-size">
+						</div>`;
+                    }
+
+                    // 插入生成的代码段
+                    document.write(generatedCode);
+                </script>
             </div>
 
 
-            <!-- Row 4 -->
-            <div class="row">
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a >A</a>
-<!--                         <a href="https://github.com/openai/shap-e">Shap-E</a> -->
+
+            <script>
+                var typeNames = ['A', 'B', 'C', 'D', 'E']
+                // 定义文件夹名称列表
+                var folderNames = ['realfusion', 'makeit3d', 'zero123', 'magic123', 'ours'];
+
+                // 定义文件列表
+                var fileNames = ['1', '3', '4', '5', '6', '11', '13'];
+
+                // 创建一个字符串变量来保存生成的代码
+                var generatedCode = '';
+                /*
+                generatedCode += `
+                    <div class="container">
+                `;
+                */
+
+                // 循环遍历文件夹名称列表
+                for (var i = 0; i < folderNames.length; i++) {
+                    var folderName = folderNames[i];
+
+                    // 生成每个文件夹对应的代码
+                    generatedCode += `
+                        <div class="row">
+                            <!-- Row ${i + 4} -->
+                            <div class="col-1 d-flex align-items-center">
+                                <div class="method-title">
+                                    ${typeNames[i]}
+                                </div>
+                            </div>
+                    `;
+
+                    // 循环遍历文件列表
+                    for (var j = 0; j < fileNames.length; j++) {
+                        var fileName = fileNames[j];
+
+                        // 生成每个文件对应的代码
+                        generatedCode += `
+                            <div class="col-3">
+                                <video src="assets/videos/${folderName}/${fileName}.mp4" autoplay loop playsinline muted class="magic-size"
+                                    type="video/mp4"></video>
+                            </div>
+                        `;
+                    }
+
+                    generatedCode += `
+                        </div>
+                    `;
+                }
+                /*eneratedCode += `
                     </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/shape_e/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <!-- Row 2 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a >B</a>
-<!--                         <a href="https://ku-cvlab.github.io/3DFuse/">3D Fuse</a> -->
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/3d_fuse/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Row 3 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a >C</a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/teapot.mp4" autoplay loop playsinline muted
-                        class="magic-size" type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/neural_lift/teapot.mp4" autoplay loop playsinline muted
-                        class="magic-size" type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Row 3 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        <a >D</a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/realfusion/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Row 4 -->
-                <div class="col-1 d-flex align-items-center">
-                    <div class="method-title">
-                        E
-                    </div>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/bear.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/dragon.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/horse.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-                <div class="col-3">
-                    <video src="assets/videos/magic123_v3/teapot.mp4" autoplay loop playsinline muted class="magic-size"
-                        type="video/mp4"></video>
-                </div>
-            </div>
+                `;
+                */
+                // 输出生成的代码到页面
+                document.write(generatedCode);
+            </script>
 
 
         </div>
-
-<!--         <div class="container" style="max-width: 1080px;">
-            <div class="row">
-                <div class="col-md-12">
-
-                </div>
-            </div>
-            <div class="row justify-content-center" style="padding: 0; margin: 0;">
-                <div class="col-md-8 text-center">
-                    <img src="assets/images/priors.png" alt="Image description" class="img-fluid">
-                    <div style="height: 30px;"></div>
-
-
-                    <img src="assets/images/2d_3d.png" alt="Image description" class="img-fluid">
-                </div>
-            </div>
-        </div> -->
-
-
-<!--         <hr class="divider" />
-        <div class="container" style="max-width: 1080px;">
-            <div class="row">
-                <div class="col-md-12">
-                    
-                </div>
-            </div>
-            <div class="row justify-content-center" style="padding: 0; margin: 0;">
-                <div class="col-md-12 text-center">
-                    <img src="assets/images/coarse_2_fine.png" alt="Image description" class="img-fluid">
-                    <div style="height: 10px;"></div>
-                </div>
-            </div>
-        </div> -->
-
 
 
         <hr class="divider" />
@@ -642,21 +329,6 @@
                 <p>Consistent123 generates highly consistent 3D objects from a single image. </p>
             </div>
         </div>
-
-
-<!--         <div class="container" style="max-width: 1080px;">
-            <div class="row">
-                <div class="col-md-12">
-
-                </div>
-            </div>
-
-
-            <div class="row justify-content-center" style="padding: 0; margin: 0;">
-
-            </div>
-
-        </div> -->
 
         <hr class="divider" />
 
