@@ -781,21 +781,6 @@ model-viewer .controls {
     padding-left: 5px;
     padding-right: 5px;
 }
-
-.showcase-size {
-    width: 150px; 
-    height: 250px;
-    object-fit: cover;
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-top: 2.5px;
-    padding-bottom: 2.55px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
 .show-size {
     width: 200px; 
     height: 200px;
@@ -826,3 +811,8 @@ model-viewer .controls {
 .col-3{
     max-width: 120px; /* default 200px */
 }
+
+.col-5{
+    max-width: 200px; /* default 200px */
+}
+
