@@ -798,8 +798,3 @@ model-viewer .controls {
 .col-3{
     max-width: 120px; /* default 200px */
 }
-
-.col-4{
-    max-width: 150px; /* default 200px */
-} 
-
