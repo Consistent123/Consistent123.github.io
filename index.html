@@ -373,7 +373,27 @@
                         // 生成每个文件对应的代码
                         generatedCode += `
                             <div class="col-3">
-                                <img src="assets/videos/${folderName}/${fileName}.jpg" class="magic-size">
+                                <img src="assets/videos/${folderName}/${fileName}.jpg" class="img-fluid show-size">
+                            </div>
+                        `;
+                    }
+
+                    generatedCode += `
+                        <div class="row">
+                            <!-- Row ${i + 4} -->
+                            <div class="col-1 d-flex align-items-center">
+                                <div class="method-title">
+                                    ${typeNames[i]}
+                                </div>
+                            </div>
+                    `;
+
+			                  
+                    for (var j = 0; j < fileNames.length; j++) {
+                        var fileName = fileNames[j];
+
+                        generatedCode += `
+                            <div class="col-3">
                                 <video src="assets/videos/${folderName}/${fileName}.mp4" autoplay loop playsinline muted class="magic-size"
                                     type="video/mp4"></video>
                             </div>
