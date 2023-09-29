@@ -797,8 +797,8 @@ model-viewer .controls {
 }
 
 .show-size {
-    width: 150px; /* Adjust the width as needed default 150px*/
-    height: 250px; /* Adjust the height as needed default 150px */
+    width: 200px; 
+    height: 200px;
     object-fit: cover;
     margin-top: 2.5px;
     margin-bottom: 2.5px;
