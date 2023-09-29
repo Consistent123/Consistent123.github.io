@@ -337,6 +337,7 @@
                 var typeNames = ['', '', '', ''];
                 // 定义文件夹名称列表
                 var folderNames = ['ours2', 'ours3', 'ours4', 'ours5'];
+		var imgfolderNames = ['showcase_1', 'showcase_2', 'showcase_3', 'showcase_4'];
 
                 // 定义文件列表
                 var fileNames = ['1', '2', '3', '4'];
@@ -354,7 +355,7 @@
                 // 循环遍历文件夹名称列表
                 for (var i = 0; i < folderNames.length; i++) {
                     var folderName = folderNames[i];
-
+		    var imgfolderName = imgfolderNames[i];
                     // 生成每个文件夹对应的代码
                     generatedCode += `
                         <div class="row">
@@ -372,8 +373,8 @@
 
                         // 生成每个文件对应的代码
                         generatedCode += `
-                            <div class="col-3">
-                                <img src="assets/videos/${folderName}/${fileName}.jpg" class="img-fluid show-size">
+                            <div class="col-5">
+                                <img src="assets/videos/${imgfolderName}/${fileName}.jpg" class="img-fluid show-size">
                             </div>
                         `;
                     }
@@ -398,7 +399,7 @@
                         var fileName = fileNames[j];
 
                         generatedCode += `
-                            <div class="col-3">
+                            <div class="col-5">
                                 <video src="assets/videos/${folderName}/${fileName}.mp4" autoplay loop playsinline muted class="show-size"
                                     type="video/mp4"></video>
                             </div>
